@@ -1,0 +1,23 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.adminbar-on {
+    top: 32px;
+
+    #menu-main-menu {
+        top: 112px !important;
+    }
+}
+
+.container {
+    width: 90%;
+    max-width: 1700px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
