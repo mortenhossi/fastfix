@@ -1,0 +1,80 @@
+.contact-widget {
+    margin: 50px 0;
+
+    .contact-form {
+
+        .wpcf7-form {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 900px;
+            margin: auto;
+
+            p {
+                &:nth-child(2), &:nth-child(3) {
+                    width: 50%;
+
+                    @media screen and (max-width: $tablet) {
+                        width: 100%;
+                        margin-top: 10px;
+                    }
+                }
+
+                &:nth-child(4), &:nth-child(5) {
+                    width: 50%;
+                    margin-top: 10px;
+
+                    @media screen and (max-width: $tablet) {
+                        width: 100%;
+                    }
+                }
+
+                &:nth-child(6) {
+                    width: 100%;
+                    margin-top: 20px;
+                }
+
+                input[type=text], input[type=number], input[type=email] {
+                    width: 80%;
+
+                    @media screen and (max-width: $tablet) {
+                        width: 100%;
+                    }
+                }
+
+                textarea {
+                    width: 90%;
+                    resize: vertical;
+
+                    @media screen and (max-width: $tablet) {
+                        width: 100%;
+                    }
+                }
+
+                input, textarea {
+                    border: 1px solid $green;
+                    border-radius: 5px;
+                    padding: 10px;
+                }
+
+                input[type=submit] {
+                    background: $green;
+                    color: white;
+                    border-radius: 99px;
+                    padding: 15px;
+                    margin-top: 20px;
+                    cursor: pointer;
+                    transition: all .2s ease;
+                    font-weight: 700;
+
+                    &:hover {
+                        transform: translateY(-1px);
+                        background: lighten($green, 5%);
+                    }
+                }
+            }
+            .wpcf7-validation-errors {
+                border: 2px solid #ff0000;
+            }
+        }
+    }
+}

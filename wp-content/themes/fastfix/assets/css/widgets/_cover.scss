@@ -1,0 +1,50 @@
+.cover-widget {
+    height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 500px) {
+        height: 400px;
+    }
+
+    .cover-image {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+
+        &:after {
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: black;
+            opacity: 0.7;
+        }
+    }
+
+    .cover-headline {
+        position: relative;
+        color: $green;
+        max-width: 800px;
+        text-align: center;
+
+        h2 {
+            color: white;
+            font-weight: 400;
+        }
+    }
+}
+

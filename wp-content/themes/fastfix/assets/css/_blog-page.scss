@@ -1,0 +1,100 @@
+.blog-wrapper {
+    margin-bottom: 100px;
+
+    .blog-title {
+        margin: 100px 0;
+
+        @media screen and (max-width: $tablet) {
+            margin: 50px 0;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+
+        .green-line {
+            margin: auto;
+        }
+
+    }
+
+    
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+
+        .blog-post {
+            margin-top: 20px;
+            background: $gray;
+            border-radius: 5px;
+            width: calc(25% - 20px);
+
+            @media screen and (max-width: 1100px) {
+                width: calc(33% - 10px);
+            }
+
+            @media screen and (max-width: 900px) {
+                width: calc(50% - 10px);
+            }
+
+            @media screen and (max-width: $mobile) {
+                width: 100%;
+            }
+
+            &:hover {
+                .thumbnail {
+                    img {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+
+            .thumbnail {
+                height: 200px;
+                width: 100%;
+                text-align: center;
+                overflow: hidden;
+                
+                img {
+                    transition: all .2s ease;
+                    max-width: 100%;
+                    max-height: 100%;
+                    object-fit: cover;
+                    border-radius: 5px 5px 0 0;
+                }
+            }
+
+            .content {
+                padding: 15px;
+                color: white;
+
+                .title {
+                    color: $green;
+                    font-size: 20px;
+                    font-weight: 700;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+
+        .blog-filler {
+            content: "";
+            width: calc(25% - 20px);
+
+            @media screen and (max-width: 1100px) {
+                width: calc(33% - 10px);
+            }
+
+            @media screen and (max-width: 900px) {
+                width: calc(50% - 10px);
+            }
+
+            @media screen and (max-width: $mobile) {
+                width: 100%;
+            }
+
+        }
+    }
+}

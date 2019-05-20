@@ -1,1 +1,1 @@
-fastfix
+sass --watch assets/css/all.scss:assets/css/all.css

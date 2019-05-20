@@ -2,13 +2,23 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 .adminbar-on {
-    top: 32px;
+    top: 32px !important;
 
     #menu-main-menu {
-        top: 112px !important;
+        top: 151px;
+
+        @media screen and (max-width: 782px) {
+            top: 46px;
+        }
     }
 }
 
@@ -20,4 +30,30 @@ html, body {
 
 a {
     text-decoration: none;
+}
+
+.button {
+    display: inline-block;
+    background: $green;
+    border-radius: 99px;
+    padding: 15px;
+    color: white;
+    transition: all .2s ease;
+    font-weight: 700;
+
+    @media screen and (max-width: 1100px) {
+        font-size: 14px;
+    }
+
+    &:hover {
+        transform: translateY(-1px);
+        background: lighten($green, 5%);
+    }
+}
+
+.green-line {
+    width: 50px;
+    height: 5px;
+    background: #477712;
+    margin-bottom: 50px;
 }

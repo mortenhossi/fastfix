@@ -1,0 +1,92 @@
+.text-image-widget {
+    margin-top: 50px;
+
+    &.background-color {
+        background: $text;
+        color: white;
+        padding: 50px 0;
+    }
+    .container {
+        display: flex;
+
+        &.image-first {
+            flex-direction: row-reverse;
+            @media screen and (max-width: $tablet) {
+                flex-direction: column;
+            }
+        }
+
+        @media screen and (max-width: $tablet) {
+            flex-direction: column;
+        }
+
+        .content-wrapper {
+            width: 50%;
+
+            @media screen and (max-width: $tablet) {
+                width: 100%;
+            }
+
+            .header-wrapper {
+                h2 {
+                    @include font-size($small-header);
+                    margin: 0;
+                }
+
+                p {
+                    margin-bottom: 10px;
+                    span {
+                        color: $green;
+                    }
+                }
+            }
+
+            .text-image-line {
+                width: 50px;
+                height: 5px;
+                background: $green;
+                margin-top: 20px;
+                margin-bottom: 50px;
+            }
+
+            .content {
+                max-width: 600px;
+                @include font-size($big-text-sizes);
+            }
+
+            .button-wrapper {
+                margin-top: 20px;
+                transition: all .2s ease;
+            }
+        }
+
+        .image-wrapper {
+            width: 50%;
+            display: flex;
+            align-items: center;
+
+            @media screen and (max-width: $tablet) {
+                width: 100%;
+                height: 300px;
+                margin-top: 30px;
+            }
+
+            .image-container {
+                width: 100%;
+                height: 100%;
+                max-height: 400px;
+                text-align: center;
+
+                @media screen and (max-width: $tablet) {
+                    text-align: left;
+                }
+
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}

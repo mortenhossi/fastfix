@@ -1,0 +1,50 @@
+.faq-widget {
+
+    .faq-wrapper {
+        margin: 100px 0;
+
+        .faq {
+            width: 100%;
+
+            &:nth-of-type(even) {
+                .faq-title {
+                    background: $whitegray;
+                }
+            }
+            .faq-title {
+                width: 100%;;
+                display: flex;
+                justify-content: space-between;
+                padding: 20px;
+                background: $gray;
+                color: $green;
+                @include font-size($medium-text-sizes);
+                box-sizing: border-box;
+
+                .faq-icon {
+                    margin-right: 20px;
+                    font-size: 32px;
+                    cursor: pointer;
+                    user-select: none;
+                }
+            }
+
+            .faq-content {
+                width: 100%;
+                padding: 20px;
+                background: $lightgray;
+                transition: all 4s ease;
+                display: none;
+                box-sizing: border-box;
+
+                &.open {
+                    display: block;
+                }
+
+                .content-inner {
+                    max-width: 1000px;
+                }
+            }
+        }
+    }
+}
