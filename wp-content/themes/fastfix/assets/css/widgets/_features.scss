@@ -1,4 +1,8 @@
 .features-widget {
+    &.margin-top {
+        margin: 100px 0;
+    }
+
     .container {
         .title-wrapper {
             text-align: center;

@@ -43,6 +43,11 @@ class FeaturesWidget extends SiteOrigin_Widget {
                    'type' => 'text',
                    'label' => 'Title'
                ),
+               'margin_top' => array(
+                    'type' => 'checkbox',
+                    'label' => 'Margin?',
+                    'default' => false,
+                ),
                'feature_repeater' => array(
                    'type' => 'repeater',
                    'label' => 'Features Repeater',

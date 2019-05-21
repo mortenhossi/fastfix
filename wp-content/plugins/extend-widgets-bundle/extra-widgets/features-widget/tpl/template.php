@@ -1,9 +1,10 @@
 <?php
 $title = $instance['title'];
+$margin_top = $instance['margin_top'];
 $feature_repeater = $instance['feature_repeater'];
 ?>
 
-<div class="features-widget">
+<div class="features-widget <?php echo ($margin_top) ? "margin-top" : ""; ?>">
     <div class="container">
         <?php if (!empty($title)) { ?>
             <div class="title-wrapper">

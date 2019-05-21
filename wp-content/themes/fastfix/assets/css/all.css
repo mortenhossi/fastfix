@@ -589,6 +589,9 @@ footer .sub-footer .container .contact-social a {
   object-fit: contain;
 }
 
+.features-widget.margin-top {
+  margin: 100px 0;
+}
 .features-widget .container .title-wrapper {
   text-align: center;
 }
