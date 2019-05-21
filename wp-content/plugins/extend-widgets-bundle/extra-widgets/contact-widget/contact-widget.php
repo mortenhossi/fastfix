@@ -42,6 +42,11 @@ class ContactWidget extends SiteOrigin_Widget {
                    'type' => 'text',
                    'label' => 'Contact Form',
                ),
+               'newsletter' => array(
+                   'type' => 'checkbox',
+                   'label' => 'Nyhedsbrev?',
+                   'default' => false,
+               ),
             ),
     
             //The $base_folder path string.

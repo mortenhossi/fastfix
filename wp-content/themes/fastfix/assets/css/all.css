@@ -1010,5 +1010,19 @@ footer .sub-footer .container .contact-social a {
 .contact-widget .contact-form .wpcf7-form .wpcf7-validation-errors {
   border: 2px solid #ff0000;
 }
+.contact-widget.newsletter .contact-form .wpcf7-form {
+  display: block;
+}
+.contact-widget.newsletter .contact-form .wpcf7-form p:nth-child(2) {
+  width: 50%;
+  margin: auto;
+}
+.contact-widget.newsletter .contact-form .wpcf7-form p:nth-child(3) {
+  width: 100%;
+  text-align: center;
+}
+.contact-widget.newsletter .contact-form .wpcf7-form p input[type=email] {
+  width: 100%;
+}
 
 /*# sourceMappingURL=all.css.map */

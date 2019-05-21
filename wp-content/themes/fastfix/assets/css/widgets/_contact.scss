@@ -77,4 +77,25 @@
             }
         }
     }
+
+    &.newsletter {
+        .contact-form .wpcf7-form {
+            display: block;
+        }
+
+        .contact-form .wpcf7-form p:nth-child(2) {
+            width: 50%;
+            margin: auto;
+        }
+
+        .contact-form .wpcf7-form p:nth-child(3) {
+            width: 100%;
+            text-align: center;
+        }
+
+        .contact-form .wpcf7-form p input[type=email] {
+            width: 100%;
+        }
+
+    }
 }
