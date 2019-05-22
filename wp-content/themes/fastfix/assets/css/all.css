@@ -58,6 +58,7 @@ a {
 }
 
 .navigation {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   background: white;
@@ -65,26 +66,26 @@ a {
 }
 @media screen and (min-width: 782px) {
   .navigation.adminbar-on nav #menu-main-menu {
-    top: 152px;
+    top: 151px;
   }
 }
 @media screen and (max-width: 900px) {
   .navigation.adminbar-on nav #menu-main-menu {
-    top: 180px;
+    top: 112px;
   }
 }
 @media screen and (max-width: 782px) {
   .navigation.adminbar-on nav #menu-main-menu {
-    top: 195px;
-  }
-}
-@media screen and (max-width: 600px) {
-  .navigation.adminbar-on nav #menu-main-menu {
-    top: 224px;
+    top: 126px;
   }
 }
 .navigation .topnav {
   background: #B3B3B3;
+}
+@media screen and (max-width: 900px) {
+  .navigation .topnav {
+    display: none;
+  }
 }
 .navigation .topnav .container {
   display: flex;
@@ -146,7 +147,7 @@ a {
   .navigation nav #menu-main-menu {
     visibility: hidden;
     position: fixed;
-    top: 120px;
+    top: 119px;
     right: 0;
     bottom: 0;
     background: #1A1A1A;
@@ -155,12 +156,7 @@ a {
 }
 @media screen and (max-width: 900px) {
   .navigation nav #menu-main-menu {
-    top: 148px;
-  }
-}
-@media screen and (max-width: 600px) {
-  .navigation nav #menu-main-menu {
-    top: 177px;
+    top: 80px;
   }
 }
 .navigation nav #menu-main-menu .current-menu-item a {
@@ -197,6 +193,7 @@ a {
   width: 30%;
   transition: all 0.2s ease;
   visibility: visible;
+  overflow: auto;
 }
 @media screen and (max-width: 700px) {
   .navigation nav #menu-main-menu.open {
@@ -452,12 +449,18 @@ footer .sub-footer .container .contact-social a {
   height: 600px;
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 @media screen and (max-width: 500px) {
   .cover-widget {
-    height: 400px;
+    height: 500px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .cover-widget.cta {
+    height: 100%;
   }
 }
 .cover-widget .cover-image {
@@ -491,6 +494,18 @@ footer .sub-footer .container .contact-social a {
 .cover-widget .cover-headline h2 {
   color: white;
   font-weight: 400;
+}
+.cover-widget .cta-container {
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  color: white;
+  padding: 20px;
+}
+.cover-widget .cta-container .button {
+  margin-top: 20px;
 }
 
 .text-image-widget {

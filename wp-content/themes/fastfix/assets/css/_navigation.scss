@@ -1,4 +1,5 @@
 .navigation {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     background: white;
@@ -9,19 +10,15 @@
             #menu-main-menu {
 
                 @media screen and (min-width: 782px) {
-                    top: 152px;
+                    top: 151px;
                 }
 
                 @media screen and (max-width: $tablet) {
-                    top: 180px;
+                    top: 112px;
                 }
 
                 @media screen and (max-width: 782px) {
-                    top: 195px;
-                }
-        
-                @media screen and (max-width: $mobile) {
-                    top: 224px;
+                    top: 126px;
                 }
             }
         }
@@ -29,6 +26,10 @@
 
     .topnav {
         background: $gray;
+
+        @media screen and (max-width: $tablet) {
+            display: none;
+        }
     
         .container {
             display: flex;
@@ -93,7 +94,7 @@
             @media screen and (max-width: 1100px) {
                 visibility: hidden;
                 position: fixed;
-                top: 120px;
+                top: 119px;
                 right: 0;
                 bottom: 0;
                 background: $text;
@@ -101,11 +102,7 @@
             }
     
             @media screen and (max-width: $tablet) {
-                top: 148px;
-            }
-    
-            @media screen and (max-width: $mobile) {
-                top: 177px;
+                top: 80px;
             }
     
             .current-menu-item {
@@ -145,6 +142,7 @@
                 width: 30%;
                 transition: all .2s ease;
                 visibility: visible;
+                overflow: auto;
     
                 @media screen and (max-width: 700px) {
                     width: 100%;

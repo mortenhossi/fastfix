@@ -54,6 +54,45 @@ class CoverWidget extends SiteOrigin_Widget {
                     'update' => 'Set image',
                     'library' => 'image',
                 ),
+                'cta_checkbox' => array(
+                    'type' => 'checkbox',
+                    'label' => 'CTA checkbox',
+                    'default', false,
+                ),
+                'cta_section' => array(
+                    'type' => 'section',
+                    'label' => 'CTA section',
+                    'fields' => array(
+                        'title' => array(
+                            'type' => 'text',
+                            'label' => 'Title',
+                        ),
+                        'benefits_repeater' => array(
+                            'type' => 'repeater',
+                            'label' => 'Benefits repeater',
+                            'item_name'  => 'Repeater item',
+                            'item_label' => array(
+                                'selector'     => "[id*='benefit']",
+                                'update_event' => 'change',
+                                'value_method' => 'val'
+                            ),
+                            'fields' => array(
+                                'benefit' => array(
+                                    'type' => 'text',
+                                    'label' => 'Benefit'
+                                ),
+                            ),
+                        ),
+                        'button_text' => array(
+                            'type' => 'text',
+                            'label' => 'Button text'
+                        ),
+                        'button_link' => array(
+                            'type' => 'link',
+                            'label' => 'Button link'
+                        ),
+                    ),
+                ),
             ),
     
             //The $base_folder path string.

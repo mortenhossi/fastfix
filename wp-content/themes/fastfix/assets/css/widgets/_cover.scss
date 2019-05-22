@@ -2,11 +2,18 @@
     height: 600px;
     position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
     @media screen and (max-width: 500px) {
-        height: 400px;
+        height: 500px;
+    }
+
+    &.cta {
+        @media screen and (max-width: 500px) {
+            height: 100%;
+        } 
     }
 
     .cover-image {
@@ -44,6 +51,20 @@
         h2 {
             color: white;
             font-weight: 400;
+        }
+    }
+
+    .cta-container {
+        margin-top: 20px;
+        text-align: center;
+        position: relative;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 5px;
+        color: white;
+        padding: 20px;
+
+        .button {
+            margin-top: 20px;
         }
     }
 }
