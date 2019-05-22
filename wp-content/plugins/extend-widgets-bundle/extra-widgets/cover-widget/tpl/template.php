@@ -22,7 +22,7 @@ $cta_section = $instance['cta_section'];
         </div>
     <?php } ?>
 
-    <?php if (!empty($cta_section)) { ?>
+    <?php if (!empty($cta_section['title'])) { ?>
         <div class="cta-container">
             <div class="cta-inner">
                 <?php if (!empty($cta_section['title'])) { ?>
@@ -41,6 +41,12 @@ $cta_section = $instance['cta_section'];
 
                 <?php if (!empty($cta_section['button_text']) and !empty($cta_section['button_link'])) { ?>
                     <a href="<?php echo $cta_section['button_link'] ?>" class="button"><?php echo $cta_section['button_text'] ?></a>
+                <?php } ?>
+
+                <?php if (!empty($cta_section['special_offer'])) { ?>
+                    <div class="specialoffer">
+                        <p><?php echo $cta_section['special_offer'] ?></p>
+                    </div>
                 <?php } ?>
             </div>
         </div>

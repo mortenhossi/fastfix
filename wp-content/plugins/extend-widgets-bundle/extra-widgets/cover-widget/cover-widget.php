@@ -91,6 +91,10 @@ class CoverWidget extends SiteOrigin_Widget {
                             'type' => 'link',
                             'label' => 'Button link'
                         ),
+                        'special_offer' => array(
+                            'type' => 'text',
+                            'label' => 'Special offer'
+                        ),
                     ),
                 ),
             ),

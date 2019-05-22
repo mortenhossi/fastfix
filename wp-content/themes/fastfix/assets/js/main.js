@@ -53,13 +53,16 @@ function FAQ() {
     }
 }
 
-// function hehe() {
-//     $('.faq-icon').click(function() {
-//         $(this).parent().next().slideToggle();
-        
-        
-//     });
-// }
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top - 119
+    }, 500);
+
+    console.log($($.attr(this, 'href')).offset().top);
+});
+
 
 
 

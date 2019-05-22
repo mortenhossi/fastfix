@@ -123,20 +123,20 @@ a {
     margin-bottom: 10px;
   }
 }
-.navigation nav {
+.navigation .container nav {
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.navigation nav .logo {
+.navigation .container nav .logo {
   width: 200px;
 }
-.navigation nav .logo img {
+.navigation .container nav .logo img {
   width: 100%;
   height: auto;
 }
-.navigation nav #menu-main-menu {
+.navigation .container nav #menu-main-menu {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -144,7 +144,7 @@ a {
   z-index: 100;
 }
 @media screen and (max-width: 1100px) {
-  .navigation nav #menu-main-menu {
+  .navigation .container nav #menu-main-menu {
     visibility: hidden;
     position: fixed;
     top: 119px;
@@ -155,68 +155,68 @@ a {
   }
 }
 @media screen and (max-width: 900px) {
-  .navigation nav #menu-main-menu {
+  .navigation .container nav #menu-main-menu {
     top: 80px;
   }
 }
-.navigation nav #menu-main-menu .current-menu-item a {
+.navigation .container nav #menu-main-menu .current-menu-item a {
   color: green;
 }
-.navigation nav #menu-main-menu li {
+.navigation .container nav #menu-main-menu li {
   display: inline-block;
   margin-right: 20px;
 }
-.navigation nav #menu-main-menu li:last-of-type {
+.navigation .container nav #menu-main-menu li:last-of-type {
   margin-right: 0;
 }
 @media screen and (max-width: 1100px) {
-  .navigation nav #menu-main-menu li {
+  .navigation .container nav #menu-main-menu li {
     display: block;
     margin-right: 0;
   }
 }
-.navigation nav #menu-main-menu li a {
+.navigation .container nav #menu-main-menu li a {
   color: #1A1A1A;
   transition: all 0.2s ease;
 }
 @media screen and (max-width: 1100px) {
-  .navigation nav #menu-main-menu li a {
+  .navigation .container nav #menu-main-menu li a {
     color: white;
     display: block;
     padding: 10px 20px;
   }
 }
-.navigation nav #menu-main-menu li a:hover {
+.navigation .container nav #menu-main-menu li a:hover {
   color: #477712;
 }
-.navigation nav #menu-main-menu.open {
+.navigation .container nav #menu-main-menu.open {
   width: 30%;
   transition: all 0.2s ease;
   visibility: visible;
   overflow: auto;
 }
 @media screen and (max-width: 700px) {
-  .navigation nav #menu-main-menu.open {
+  .navigation .container nav #menu-main-menu.open {
     width: 100%;
   }
 }
-.navigation nav .hamburger {
+.navigation .container nav .hamburger {
   display: none;
   cursor: pointer;
 }
 @media screen and (max-width: 1100px) {
-  .navigation nav .hamburger {
+  .navigation .container nav .hamburger {
     display: block;
   }
 }
-.navigation nav .hamburger .line {
+.navigation .container nav .hamburger .line {
   width: 25px;
   height: 2px;
   background: #1A1A1A;
   margin-top: 5px;
   pointer-events: none;
 }
-.navigation nav .hamburger .line:first-of-type {
+.navigation .container nav .hamburger .line:first-of-type {
   margin-top: 0;
 }
 
@@ -505,6 +505,9 @@ footer .sub-footer .container .contact-social a {
   padding: 20px;
 }
 .cover-widget .cta-container .button {
+  margin-top: 20px;
+}
+.cover-widget .cta-container .specialoffer {
   margin-top: 20px;
 }
 

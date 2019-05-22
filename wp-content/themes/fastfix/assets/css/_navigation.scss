@@ -70,106 +70,108 @@
         }
     }
     
-    nav {
-        height: 80px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    
-        .logo {
-            width: 200px;
-            img {
-                width: 100%;
-                height: auto;
-            }
-        }
-    
-        #menu-main-menu {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            transition: all .2s ease;
-            z-index: 100;
-    
-            @media screen and (max-width: 1100px) {
-                visibility: hidden;
-                position: fixed;
-                top: 119px;
-                right: 0;
-                bottom: 0;
-                background: $text;
-                width: 0px;
-            }
-    
-            @media screen and (max-width: $tablet) {
-                top: 80px;
-            }
-    
-            .current-menu-item {
-                a {
-                    color: green;
+   .container {
+        nav {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        
+            .logo {
+                width: 200px;
+                img {
+                    width: 100%;
+                    height: auto;
                 }
             }
-    
-            li {
-                display: inline-block;
-                margin-right: 20px;
-                &:last-of-type {
-                    margin-right: 0;
+        
+            #menu-main-menu {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                transition: all .2s ease;
+                z-index: 100;
+        
+                @media screen and (max-width: 1100px) {
+                    visibility: hidden;
+                    position: fixed;
+                    top: 119px;
+                    right: 0;
+                    bottom: 0;
+                    background: $text;
+                    width: 0px;
                 }
-    
+        
+                @media screen and (max-width: $tablet) {
+                    top: 80px;
+                }
+        
+                .current-menu-item {
+                    a {
+                        color: green;
+                    }
+                }
+        
+                li {
+                    display: inline-block;
+                    margin-right: 20px;
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+        
+                    @media screen and (max-width: 1100px) {
+                        display: block;
+                        margin-right: 0;
+                    }
+        
+                    a {
+                        color: $text;
+                        transition: all .2s ease;
+                        @media screen and (max-width: 1100px) {
+                            color: white;
+                            display: block;
+                            padding: 10px 20px;
+                        }
+        
+                        &:hover {
+                            color: $green;
+                        }
+                    }
+                }
+        
+                &.open {
+                    width: 30%;
+                    transition: all .2s ease;
+                    visibility: visible;
+                    overflow: auto;
+        
+                    @media screen and (max-width: 700px) {
+                        width: 100%;
+                    }
+                }
+            }
+        
+            .hamburger {
+                display: none;
+                cursor: pointer;
+        
                 @media screen and (max-width: 1100px) {
                     display: block;
-                    margin-right: 0;
                 }
-    
-                a {
-                    color: $text;
-                    transition: all .2s ease;
-                    @media screen and (max-width: 1100px) {
-                        color: white;
-                        display: block;
-                        padding: 10px 20px;
-                    }
-    
-                    &:hover {
-                        color: $green;
+        
+                .line {
+                    width: 25px;
+                    height: 2px;
+                    background: $text;
+                    margin-top: 5px;
+                    pointer-events: none;
+                    &:first-of-type {
+                        margin-top: 0;
                     }
                 }
             }
-    
-            &.open {
-                width: 30%;
-                transition: all .2s ease;
-                visibility: visible;
-                overflow: auto;
-    
-                @media screen and (max-width: 700px) {
-                    width: 100%;
-                }
-            }
         }
-    
-        .hamburger {
-            display: none;
-            cursor: pointer;
-    
-            @media screen and (max-width: 1100px) {
-                display: block;
-            }
-    
-            .line {
-                width: 25px;
-                height: 2px;
-                background: $text;
-                margin-top: 5px;
-                pointer-events: none;
-                &:first-of-type {
-                    margin-top: 0;
-                }
-            }
-        }
-    }
+   }
     
     
 }
